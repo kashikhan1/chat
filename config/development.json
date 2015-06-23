@@ -5,7 +5,7 @@
 {
 	"appID":"1606792802926024",
 	"appSecret":"9d94e23970889b95f592eb6daa6ec30f",
-	"callbackURL":"http://localhost:3000/auth/facebook/callback"
+	"callbackURL":"https://kashiapp.herokuapp.com/auth/facebook/callback"
 },
-"host":"http://localhost/3000"
+"host":"https://kashiapp.herokuapp.com"
 }
