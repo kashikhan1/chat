@@ -5,11 +5,11 @@
 	<title>ChatCAT</title>
 	<link rel="stylesheet" href="../css/room.css">
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
 	<script>
 	$(function(){
 		var host = '{{config.host}}';
-		var messages = io.connect('http://localhost:3000' + '/messages');
+		var messages = io.connect(host + '/messages');
 		var roomNum = {{room_number}};
 		var userName = '{{user.fullname}}';
 		var userPic = '{{user.profilePic}}';
