@@ -5,9 +5,9 @@
 	<title>{{title}}</title>
 	
 	<script src="/socket.io/socket.io.js"></script>
-	<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 	<script>
-	$(function(){
+	jQuery(function(){
 		var host = '{{config.host}}';
 		var socket = io.connect(host + '/roomlist');
 
@@ -18,24 +18,24 @@
 
 socket.on('roomupdate',function(data){
 	var proData = JSON.parse(data);
-	$('.roomlist').html('');
+	jQuery('.roomlist').html('');
 	for (var i = 0; i < proData.length; i++) {
 	var str	= '<a href="room/'+ proData[i]. room_number + '"><li>' + proData[i].room_name + '</li></a>';
-	$('.roomlist').prepend(str);
+	jQuery('.roomlist').prepend(str);
 
 	}
 })
 
 
- $(document).on('click', '#create', function(){
+jQuery(document).on('click', '#create', function(){
 		
-		var room_name = $('.newRoom').val();
+		var room_name = jQuery('.newRoom').val();
 		
 		if(room_name != '')
 		{
 			var room_number= parseInt(Math.random()*1000);
 			socket.emit('newroom',{room_name:room_name,room_number:room_number});
-			$('.newRoom').val('');
+			jQuery('.newRoom').val('');
 		}
 	})
  })
