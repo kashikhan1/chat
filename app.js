@@ -55,6 +55,6 @@ var io = require('socket.io').listen(server);
 require('./socket/socket.js')(io, rooms);
 
 
-http.listen(process.env.PORT || 3000, function(){
-  console.log('listening on', http.address().port);
+server.listen(app.get('port'),function(){
+console.log('Chat on port : '+ app.get('port'));
 });
