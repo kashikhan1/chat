@@ -6,7 +6,7 @@
 {
 	"appID":"1606792802926024",
 	"appSecret":"9d94e23970889b95f592eb6daa6ec30f",
-	"callbackURL":"https://chattroom.herokuapp.com/auth/facebook/callback"
+	"callbackURL":"https://kashiapp.herokuapp.com/auth/facebook/callback"
 }
-"host":"https://chattroom.herokuapp.com"
+"host":"https://kashiapp.herokuapp.com"
 }
